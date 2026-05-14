@@ -4,6 +4,20 @@ PyTorch implementation of the paper:
 
 [Geometric Transformer for Fast and Robust Point Cloud Registration](https://arxiv.org/abs/2202.06688).
 
+---
+
+## Bone Fracture Assembly (This Fork)
+
+This fork adapts GeoTransformer for **medical bone fracture fragment assembly** — predicting rigid transforms to reassemble broken bone fragments.
+
+**Key finding**: GeoTransformer's overlap-based matching is unsuitable for complementary fracture surface matching (535mm translation error, 128° rotation error on real tests). See `experiments/geotransformer.bone_fracture/README.md` for full details.
+
+**Additions**:
+- `experiments/geotransformer.bone_fracture/` — Full training/eval pipeline for bone fracture assembly
+- `geotransformer/modules/global_alignment/` — Multi-fragment pose graph optimization (migrated from [Jigsaw](https://github.com/Jiaxin-Lu/Jigsaw), NeurIPS 2023)
+
+---
+
 [Zheng Qin](https://scholar.google.com/citations?user=DnHBAN0AAAAJ), [Hao Yu](https://scholar.google.com/citations?user=g7JfRn4AAAAJ), Changjian Wang, [Yulan Guo](https://scholar.google.com/citations?user=WQRNvdsAAAAJ), Yuxing Peng, and [Kai Xu](https://scholar.google.com/citations?user=GuVkg-8AAAAJ).
 
 ## Introduction
